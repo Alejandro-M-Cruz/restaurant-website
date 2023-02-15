@@ -1,79 +1,101 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-body {
     box-sizing: border-box;
     font-family: Verdana, Arial, sans-serif;
 }
 
-h1 {
-    font-size: 2.4vw;
+.nav-bar {
+    background-color: orange;
+    height: 3vw;
+    display: block;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+}
+
+.main-title {
+    float: left;
 }
 
 nav {
-    background-color: orange;
-    height: 5vw;
-}
-
-.nav-list {
-    list-style-type: none;
-    overflow: hidden;
-}
-
-#nav-title-link {
-    float: left;
-    font-size: 2vw;
-    color: white;
-    text-decoration: none;
-    padding: 1vw;
-}
-
-.nav-list li {
     float: right;
 }
 
-.nav-list li a {
-    display: block;
-    font-size: 2vw;
-    color: white;
-    text-decoration: none;
-    padding: 1vw;
+ul {
+    list-style-type: none;
 }
 
-.nav-list li a:hover {
-    background-color: orangered;
+.nav-list li {
+    display: inline;
 }
 
-#main-title {
-    text-align: center;
-    margin-top: 3vw;
+#reservations-title {
 }
 
-#reservations-table {
+/* -------------TABLE------------- */
+
+.reservations-table {
     width: 80%;
-    margin: 2rem auto;
+    margin: 5% auto;
     box-sizing: border-box;
     border-collapse: collapse;
 }
 
-#reservations-table th, #reservations-table td {
-    padding: 10px;
+.reservations-table th, .reservations-table td {
+    padding: 1%;
     border: 1px solid lightgrey;
 }
 
-#reservations-table th {
+.reservations-table th {
+    font-size: 1.3vw;
     background-color: orange;
     color: white;
 }
 
-#reservations-table td {
+.reservations-table td {
     text-align: center;
+    font-size: 1vw;
 }
 
-#reservations-table tr:hover {
-    background-color: #eeeeee;
+.reservations-table tr:nth-child(odd) {
+    background-color: #f6f6f6;
 }
 
+.reservations-table tr:hover {
+    background-color: #dddddd;
+}
+
+
+/* -------------BUTTONS------------- */
+
+.management-button {
+    display: block;
+    font-size: 1vw;
+    width: 20%;
+    padding: 1vw;
+    text-align: center;
+    text-decoration: none;
+    float:left;
+}
+
+.new-res-button {
+    color: black;
+    background-color: limegreen;
+    margin: 3% 17% 0 3%;
+}
+
+.cancel-res-button {
+    color: white;
+    background-color: red;
+    margin-top: 3%;
+}
+
+.back-button {
+    color: black;
+    background-color: #e5c705;
+    margin: 3% 3% 0 17%;
+}
 

@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="reservations-styles.css">
+    <link rel="stylesheet" href="/css/reservations-styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <a href="#" id="nav-title-link"><h1>La Nostra Casa</h1></a>
-            <ul class="nav-list">
-                <li><a href="#">Usted</a></li>
-                <li><a href="#">Sobre nosotros</a></li>
-                <li><a href="#">Reservas</a></li>
-                <li><a href="#">Menú</a></li>
-                <li><a href="#">Inicio</a></li>
-            </ul>
-        </nav>
-        <h1 id="main-title">Reservas</h1>
+        <div class="nav-bar">
+            <a href="#" class="main-title"><h1>La Nostra Casa</h1></a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Menú</a></li>
+                    <li><a href="#">Reservas</a></li>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Usted</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1 id="reservations-title">Reservas</h1>
     </header>
-    <table id="reservations-table">
+    <table class="reservations-table">
         <tr>
             <th>Fecha</th>
             <th>Hora</th>
@@ -53,6 +55,9 @@
             <td>Alberto</td>
         </tr>
     </table>
+
+    <a href="#" class="management-button back-button">Atrás</a>
+    <a href="#" class="management-button cancel-res-button">Cancelar reserva</a>
+    <a href="#" class="management-button new-res-button">Realizar nueva reserva</a>
 </body>
-<script src="main.js"></script>
 </html>
