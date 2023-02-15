@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2.4vw;
+}
+
+nav {
+    background-color: orange;
+    height: 5vw;
+}
+
+.nav-list {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+#nav-title-link {
+    float: left;
+    font-size: 2vw;
+    color: white;
+    text-decoration: none;
+    padding: 1vw;
+}
+
+.nav-list li {
+    float: right;
+}
+
+.nav-list li a {
+    display: block;
+    font-size: 2vw;
+    color: white;
+    text-decoration: none;
+    padding: 1vw;
+}
+
+.nav-list li a:hover {
+    background-color: orangered;
+}
+
+#main-title {
+    text-align: center;
+    margin-top: 3vw;
+}
+
+#reservations-table {
+    width: 80%;
+    margin: 2rem auto;
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+#reservations-table th, #reservations-table td {
+    padding: 10px;
+    border: 1px solid lightgrey;
+}
+
+#reservations-table th {
+    background-color: orange;
+    color: white;
+}
+
+#reservations-table td {
+    text-align: center;
+}
+
+#reservations-table tr:hover {
+    background-color: #eeeeee;
+}
+
+
