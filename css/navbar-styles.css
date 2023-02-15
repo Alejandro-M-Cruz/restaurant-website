@@ -19,28 +19,27 @@ a {
     text-decoration: none;
 }
 
-h1 {
+#la-nostra-cosa-nav-button {
     display: inline-blocK;
     font-size: 2.2rem;
     line-height: 2.2rem;
     padding: 20px;
 }
 
-h1 a {
+.lista-paginas {
+    list-style-type: none;
+}
+
+li[class^='lista-paginas'], li[class*=' lista-paginas']{
+    display: inline-block;
+}
+
+#la-nostra-cosa-nav-button a {
     color: white;
 }
 
 nav {
-    display: inline-block;
     float: right;
-}
-
-ul {
-    list-style-type: none;
-}
-
-ul li {
-    display: inline-block;
 }
 
 nav a {
@@ -72,3 +71,4 @@ img {
     height: 2.2rem;
     width: 2.2rem;
 }
+
