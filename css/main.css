@@ -1,0 +1,140 @@
+/* RESET CSS DEFAULT BEHAVIOUR */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: inherit;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+/* Modificaciones a los estilos de los SELECTORES por defecto (header, nav, a, img, etc) */
+
+header {
+    display: block;
+    position: relative;
+    background-color: orange;
+    overflow: visible;
+    z-index: 4;
+    width: 100%;
+}
+
+nav {
+    float: right;
+}
+
+nav a {
+    display: block;
+    color: black;
+    margin: 0 1.5vw;
+    padding: 1.25rem;
+    line-height: 2.2rem;
+    font-size: 1.1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: grey;
+}
+
+/* Modificaciones a los elementos tipo CLASE (.class) */
+
+.lista-paginas {
+    list-style-type: none;
+}
+
+.user-icon {
+    margin-right: 5vw;
+}
+
+.user-icon:hover img {
+    transform: scale(1.2, 1.2);
+}
+
+ul li[class^='lista-paginas'], li[class*=' lista-paginas']{
+    display: inline-block;
+}
+
+.slide-image {
+    background-color: red;
+    position: relative;
+    width: 60vw;
+    height: 40vw;
+    margin: auto;
+    text-align: right;
+}
+
+.slide-image-thing {
+    position: relative;
+    background-color: orange;
+    width: 50vw;
+    height: 35vw;
+    margin: 0 auto;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.slide-image-thing img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-image-thing__center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: blue;
+}
+
+/* Modificaciones a los elementos tipo ID (#id) */
+
+#la-nostra-cosa-nav-button {
+    display: inline-blocK;
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+    padding: 1.25rem;
+}
+
+#la-nostra-cosa-nav-button a {
+    color: white;
+}
+
+#la-nostra-cosa-nav-button:hover {
+    font-size: 2.5rem;
+}
+
+#user-icon {
+    position: absolute;
+    top: 25%;
+    height: 2.2rem;
+    width: 2.2rem;
+}
+
+#slide-image__left-arrow, #slide-image__right-arrow {
+    position: relative;
+    width: 2vw;
+    height: 2vw;
+    display: block;
+}
+
+#slide-image__left-arrow {
+    top: 18.50vw;
+}
+
+#slide-image__right-arrow {
+    float: right;
+    bottom: 18.50vw;
+}
+
+/* Modificaciones a los elementos tipo PSEUDO-CLASE (comportamiento de los selectores, :hover, :active, :default, :etc) */
+
+nav a:not(.user-icon):hover {
+    background-color: darkorange;
+}
+
