@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+#main-title {
+    width: 50%;
+    font-size: 3rem;
+    text-align: center;
+    margin: 9rem auto 7rem auto;
+}
+
+#register-form {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+#register-form div {
+    margin: 4rem 2rem;
+}
+
+#register-form input {
+    font-size: 1.6rem;
+    border: black solid 1px;
+}
+
+.already-paragraph {
+    display: inline;
+}
+
+.already-registered-div {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#go-to-login {
+    text-decoration: none;
+    color: darkorange;
+}
+
+.cancel-button, .submit-button {
+    display: inline-block;
+    font-size: 1vw;
+    width: 20%;
+    padding: 1rem;
+    margin: 3rem;
+    text-align: center;
+}
+
+.cancel-button:hover, .submit-button:hover {
+    cursor: pointer;
+}
+
+.cancel-button {
+    background-color: red;
+    color: white;
+}
+
+.submit-button {
+    background-color: limegreen;
+}
+
+
+
