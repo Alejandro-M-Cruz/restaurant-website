@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+#footer-container {
+    background-color: lightgrey;
+}
+
+.vertical-list, .horizontal-list {
+    list-style-type: none;
+}
+
+.vertical-list li, .horizontal-list li {
+    padding: 0.5rem;
+}
+
+.vertical-list {
+    text-align: center;
+}
+
+.horizontal-list {
+    width: 100%;
+    padding-bottom: 0.8rem;
+}
+
+.horizontal-list li {
+    display: inline-block;
+}
+
+.social-media-icon {
+    transform: translateY(25%);
+}
+
+.social-media-icon img {
+    width: 3rem;
+}

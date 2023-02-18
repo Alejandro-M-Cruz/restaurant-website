@@ -6,7 +6,7 @@
     font-family: Verdana, Arial, sans-serif;
 }
 
-header {
+#nav-bar-container {
     display: block;
     position: fixed;
     top: 0;
@@ -19,14 +19,14 @@ a {
     text-decoration: none;
 }
 
-#la-nostra-cosa-nav-button {
+#la-nostra-casa-nav-button {
     display: inline-blocK;
     font-size: 2.2rem;
     line-height: 2.2rem;
     padding: 1.25rem;
 }
 
-#la-nostra-cosa-nav-button:hover {
+#la-nostra-casa-nav-button:hover {
     font-size: 2.5rem;
 }
 
@@ -34,11 +34,11 @@ a {
     list-style-type: none;
 }
 
-li[class^='lista-paginas'], li[class*=' lista-paginas']{
+li[class^='lista-paginas'], li[class*=' lista-paginas'] {
     display: inline-block;
 }
 
-#la-nostra-cosa-nav-button a {
+#la-nostra-casa-nav-button a {
     color: white;
 }
 

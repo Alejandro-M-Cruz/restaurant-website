@@ -1,39 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
     font-family: Verdana, Arial, sans-serif;
 }
 
-.nav-bar {
-    background-color: orange;
-    height: 3vw;
-    display: block;
-}
-
-.nav-bar a {
-    text-decoration: none;
-    color: white;
-}
-
-.main-title {
-    float: left;
-}
-
-nav {
-    float: right;
-}
-
-ul {
-    list-style-type: none;
-}
-
-.nav-list li {
-    display: inline;
-}
-
 #reservations-title {
-    margin-top: 7vw;
+    margin-top: 10rem;
     text-align: center;
 }
 
@@ -80,7 +54,7 @@ ul {
     padding: 1vw;
     text-align: center;
     text-decoration: none;
-    float:left;
+    float: left;
 }
 
 .new-res-button {
