@@ -9,6 +9,11 @@
 #reservations-title {
     margin-top: 10rem;
     text-align: center;
+    font-size: 2.5rem;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 /* -------------TABLE------------- */
@@ -74,10 +79,20 @@
     margin: 3% 17% 0 3%;
 }
 
+.new-res-button[disabled] {
+    background-color: lightgreen;
+    cursor: default;
+}
+
 .cancel-res-button {
     color: white;
     background-color: red;
     margin-top: 3%;
+}
+
+.cancel-res-button[disabled] {
+    background-color: indianred;
+    cursor: default;
 }
 
 .back-button {
@@ -85,4 +100,42 @@
     background-color: #e5c705;
     margin: 3% 3% 0 17%;
 }
+
+
+/* -------------CONFIRMATION DIALOG------------- */
+
+.confirmation-dialog {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: orange solid 3px;
+    padding: 1rem;
+    width: 60%;
+    height: 50%;
+    text-align: center;
+}
+
+.confirmation-dialog p {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.dialog-button {
+    padding: 1rem 3rem;
+    margin: 2rem;
+}
+
+.yes-button {
+    background-color: red;
+    color: white;
+}
+
+.no-button {
+    background-color: limegreen;
+}
+
 

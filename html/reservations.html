@@ -14,16 +14,23 @@
         <!--Navigation bar (loaded dynamically)-->
     </header>
 
-    <h1 id="reservations-title">Reservas</h1>
+    <h2 id="reservations-title">Reservas</h2>
     <table class="reservations-table">
 
         <!--Reservations (loaded dynamically)-->
 
     </table>
 
-    <a href="#" class="management-button back-button">Atrás</a>
-    <a href="#" class="management-button cancel-res-button">Cancelar reserva</a>
-    <a href="#" class="management-button new-res-button">Realizar nueva reserva</a>
+    <button class="management-button back-button">Atrás</button>
+    <button class="management-button cancel-res-button" disabled>Cancelar reserva</button>
+    <button class="management-button new-res-button">Realizar nueva reserva</button>
+
+    <div class="confirmation-dialog">
+        <p>¿Desea cancelar la reserva seleccionada?</p>
+        <div id="reservation-to-delete"></div>
+        <button class="dialog-button yes-button">Sí</button>
+        <button class="dialog-button no-button">No</button>
+    </div>
 
     <script src="/javascript/navigation-bar.js"></script>
     <script src="/javascript/reservations.js"></script>
