@@ -69,10 +69,9 @@ function loadPage(pageContent) {
     }
     cancelButton.innerHTML = pageContent.cancelButtonLabel
     submitButton.innerHTML = pageContent.confirmButtonLabel
-
     alreadyDiv.innerHTML = `
         <p class="already-paragraph">${pageContent.already}</p>
-        <a href="#" id="go-to-login-signup" onclick="changePage()"><b>${pageContent.alreadyLink}</b></a>
+        <button class="go-to-login-signup" onclick="changePage()"><b>${pageContent.alreadyLink}</b></button>
     `
 }
 

@@ -90,13 +90,19 @@
 }
 
 .already-div {
+    margin-top: 1rem;
     text-align: center;
     font-size: 1.5rem;
 }
 
-#go-to-login-signup {
-    text-decoration: none;
+.go-to-login-signup {
     color: darkorange;
+    background: none;
+    font-size: inherit;
+}
+
+.go-to-login-signup:hover {
+    cursor: pointer;
 }
 
 
