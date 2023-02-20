@@ -106,8 +106,10 @@ function cancelOnClick(selectedRow, reservations) {
     if (selectedRow === null) return alert("Seleccione una reserva para poder cancelarla")
     for (let i=0; i<reservations.length; i++) {
         if (selectedRow.id === "reservation" + reservations[i].id) {
-            reservations.splice(i, 1)
-            fillTable()
+            if (confirm("¿Seguro que desea eliminar la reserva seleccionada?")) {
+                reservations.splice(i, 1)
+                fillTable()
+            } 
             break
         }
     }

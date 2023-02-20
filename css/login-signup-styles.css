@@ -13,23 +13,23 @@
     margin: 7rem auto 5rem auto;
 }
 
-#register-form {
+#user-form {
     text-align: center;
     font-size: 1.6rem;
 }
 
-#register-form div {
+#user-form div {
     margin: 4rem 2rem;
 }
 
-#register-form input {
+#user-form input {
     display: inline-block;
     font-size: 1.4rem;
     height: 2rem;
     border: black solid 1px;
 }
 
-#register-form input:focus {
+#user-form input:focus {
     background-color: #eeeeee;
 }
 
@@ -37,12 +37,12 @@
     display: inline;
 }
 
-.already-registered-div {
+.already-div {
     text-align: center;
     font-size: 1.5rem;
 }
 
-#go-to-login {
+#go-to-login-signup {
     text-decoration: none;
     color: darkorange;
 }
