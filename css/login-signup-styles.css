@@ -6,45 +6,58 @@
     font-family: Verdana, Arial, sans-serif;
 }
 
-#main-title {
+.main-title {
     width: 50%;
     font-size: 2.5rem;
     text-align: center;
-    margin: 7rem auto 5rem auto;
+    margin: 7rem auto 0 auto;
 }
 
-#user-form {
-    text-align: center;
+
+/* -------------FORM------------- */
+
+.user-form {
     font-size: 1.6rem;
+    text-align: center;
 }
 
-#user-form div {
-    margin: 4rem 2rem;
-}
-
-#user-form input {
+.user-form .labels-container, .user-form .inputs-container {
     display: inline-block;
+    text-align: left;
+}
+
+.labels-container {
+    margin-right: 2rem;
+}
+
+.inputs-container {
+    margin-left: 2rem;
+}
+
+.user-form label, .user-form input {
+    display: block;
+    margin: 5rem 0;
+}
+
+.user-form input {
+    display: block;
     font-size: 1.4rem;
     height: 2rem;
     border: black solid 1px;
+    width: 25rem;
 }
 
-#user-form input:focus {
+.user-form input:focus {
     background-color: #eeeeee;
 }
 
-.already-paragraph {
-    display: inline;
-}
 
-.already-div {
+/* -------------BUTTONS------------- */
+
+.buttons-container {
+    width: 100%;
+    display: block;
     text-align: center;
-    font-size: 1.5rem;
-}
-
-#go-to-login-signup {
-    text-decoration: none;
-    color: darkorange;
 }
 
 .cancel-button, .submit-button {
@@ -67,6 +80,23 @@
 
 .submit-button {
     background-color: limegreen;
+}
+
+
+/* -------------LINK TO LOGIN / SIGNUP------------- */
+
+.already-paragraph {
+    display: inline;
+}
+
+.already-div {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#go-to-login-signup {
+    text-decoration: none;
+    color: darkorange;
 }
 
 
