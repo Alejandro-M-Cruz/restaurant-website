@@ -5,34 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Nostra Casa</title>
-    <link rel="stylesheet" href="/css/navbar-styles.css">
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
     <link rel="stylesheet" href="/css/reservations-styles.css">
-    <link rel="stylesheet" href="/css/footer-styles.css">
 </head>
 <body>
-    <header>
-        <!--Navigation bar (loaded dynamically)-->
+    <header w3-include-html="/html/navbar.html">
     </header>
 
     <h2 id="reservations-title">Reservas</h2>
     <table class="reservations-table">
-
         <!--Reservations (loaded dynamically)-->
-
     </table>
 
     <button class="management-button back-button">Atrás</button>
-    <button class="management-button cancel-res-button" disabled>Cancelar reserva</button>
+    <button class="management-button cancel-res-button">Cancelar reserva</button>
     <button class="management-button new-res-button">Realizar nueva reserva</button>
 
-    <div class="confirmation-dialog">
-        <p>¿Desea cancelar la reserva seleccionada?</p>
-        <div id="reservation-to-delete"></div>
-        <button class="dialog-button yes-button">Sí</button>
-        <button class="dialog-button no-button">No</button>
+    <div w3-include-html="/html/confirmation-dialog.html">
     </div>
 
-    <script src="/javascript/navigation-bar.js"></script>
+    <script>
+        w3IncludeHTML()
+    </script>
     <script src="/javascript/reservations.js"></script>
 </body>
 </html>

@@ -29,7 +29,7 @@ let reservationsJson = `
         "name": "Alberto Santana"
       },
       {
-        "id": 4,
+        "id": 5,
         "date": "15/02/2023",
         "hour": "14:30",
         "numberOfPeople": "1",
@@ -77,12 +77,6 @@ function reservationHTML(reservation) {
     `
 }
 
-function checkButtons() {
-    const isRowSelected = document.querySelectorAll(".selected-row").length > 0
-    cancelButton.disabled = !isRowSelected || confirmationDialog.style.display !== "none";
-    newResButton.disabled = reservations.length === MAX_RESERVATIONS;
-}
-
 function fillTable() {
     table.innerHTML = tableTitleHTML()
     reservations.forEach((reservation) => table.innerHTML += reservationHTML(reservation))
@@ -96,10 +90,8 @@ function fillTable() {
                 if (r !== row) r.classList.remove("selected-row")
             })
             row.classList.toggle("selected-row")
-            checkButtons()
         }
     })
-    checkButtons()
 }
 
 fillTable()
@@ -107,25 +99,21 @@ fillTable()
 // Cancel button
 cancelButton.onclick = () => {
     const selectedRow = document.querySelector(".selected-row")
+    cancelOnClick(selectedRow, reservations)
+}
+
+function cancelOnClick(selectedRow, reservations) {
+    if (selectedRow === null) return alert("Seleccione una reserva para poder cancelarla")
     for (let i=0; i<reservations.length; i++) {
         if (selectedRow.id === "reservation" + reservations[i].id) {
-            showConfirmationDialog(reservations[i])
             reservations.splice(i, 1)
-            if (reservations.length === 0) cancelButton.disabled = true
             fillTable()
             break
         }
     }
-    checkButtons()
 }
 
-function showConfirmationDialog(reservation) {
-    reservationToDelete.innerHTML = reservationHTML(reservation)
-    confirmationDialog.style.display = "block"
-}
-
-for (const button of dialogButtons) {
-    button.onclick = () => {
-        confirmationDialog.style.display = "none"
-    }
+newResButton.onclick = () => {
+    const selectedRow = document.querySelector(".selected-row")
+    if (reservations.length >= MAX_RESERVATIONS) return alert("Ha alcanzado el máximo de reservas")
 }
