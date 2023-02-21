@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Nostra Casa</title>
+    <link rel="stylesheet" href="/css/navbar-styles.css">
+    <link rel="stylesheet" href="/css/create-reservations-styles.css">
+    <link rel="stylesheet" href="/css/footer-styles.css">
+</head>
+<body>
+    <header>
+        <!--Navigation bar (loaded dynamically)-->
+    </header>
+    <h1 id="page-title">Complete los datos para confirmar la reserva</h1>
+
+    <form id="reservation-form">
+        <div>
+            <label>Nombre completo: </label>
+            <input type="text" required>
+        </div>
+        <div>
+            <label>Fecha: </label>
+            <input type="date" name="date" min=fechaActual() required>
+        </div>
+        <div>
+            <label>Hora: </label>
+            <input type="time" name="time" min= "13:00" max="16:00" step= 900 required>
+        </div>
+        <div>
+            <label>Número de personas: </label>
+            <input type="number" name="people" min="1" max="30" required>
+        </div>
+        <button class="cancel-button" type="reset">Atrás</button>
+        <button class="submit-button" type="submit">Confirmar</button>
+    </form>
+
+    <script src="/javascript/navigation-bar.js"></script>
+    <script src="/javascript/reservation-date.js"></script>
+</body>
+</html>

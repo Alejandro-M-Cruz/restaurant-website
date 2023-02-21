@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    margin-top: 45px;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+#page-title {
+    width: 45%;
+    font-size: 3rem;
+    text-align: center;
+    margin: 9rem auto 7rem auto;
+}
+#reservation-form {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+#reservation-form div {
+    margin: 4rem 2rem;
+}
+
+#reservation-form input {
+    font-size: 1.6rem;
+    border: black solid 1px;
+}
+
+
+.cancel-button:hover, .submit-button:hover {
+    cursor: pointer;
+}
+
+.cancel-button, .submit-button {
+    display: inline-block;
+    font-size: 1vw;
+    width: 20%;
+    padding: 1rem;
+    margin: 3rem;
+    text-align: center;
+}
+
+.cancel-button {
+    background-color: red;
+    color: white;
+}
+
+.submit-button {
+    background-color: limegreen;
+}
