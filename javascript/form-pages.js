@@ -16,7 +16,7 @@ w3IncludeHTML(() => {
 
 const logInPageContent =
     {
-        "mainTitle": "Inicie sesión para poder ver sus reservas",
+        "title": "Inicie sesión para poder ver sus reservas",
         "formFields": [
             {
                 "id": "phone-number",
@@ -40,7 +40,7 @@ const logInPageContent =
 
 const signUpPageContent =
     {
-        "mainTitle": "Regístrese para poder realizar su primera reserva",
+        "title": "Regístrese para poder realizar su primera reserva",
         "formFields": [
             {
                 "id": "phone-number",
@@ -70,7 +70,7 @@ const signUpPageContent =
 
 const newReservationPageContent =
     {
-        "mainTitle": "Complete los datos para confirmar su reserva",
+        "title": "Complete los datos para confirmar su reserva",
         "formFields": [
             {
                 "id": "full-name",
@@ -109,7 +109,7 @@ function loadPage(pageContent) {
     const submitButton = document.querySelector(".submit-button")
     const alreadyDiv = document.querySelector(".already-div")
 
-    title.innerHTML = pageContent.mainTitle
+    title.innerHTML = pageContent.title
     formLabels.innerHTML = ""
     formInputs.innerHTML = ""
     pageContent.formFields.forEach(field => {
