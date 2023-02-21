@@ -14,17 +14,10 @@
     </header>
 
     <h2 id="reservations-title">Reservas</h2>
-    <table class="reservations-table">
-        <!--Reservations (loaded dynamically)-->
-    </table>
 
-    <button class="management-button back-button" onclick="window.history.back()">Atrás</button>
-    <button class="management-button cancel-res-button">Cancelar reserva</button>
-    <button class="management-button new-res-button">Realizar nueva reserva</button>
+    <section class="reservations-section" w3-include-html="/html/templates/logged-in-reservations-template.html">
+    </section>
 
-    <script>
-        w3IncludeHTML()
-    </script>
     <script src="/javascript/reservations.js"></script>
 </body>
 </html>
