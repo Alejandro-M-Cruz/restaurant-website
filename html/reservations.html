@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Nostra Casa</title>
     <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <link rel="stylesheet" href="/css/navbar-styles.css">
     <link rel="stylesheet" href="/css/reservations-styles.css">
 </head>
 <body>
-    <header w3-include-html="/html/navbar.html">
+    <header w3-include-html="/html/templates/navbar.html">
     </header>
 
     <h2 id="reservations-title">Reservas</h2>
@@ -17,12 +18,9 @@
         <!--Reservations (loaded dynamically)-->
     </table>
 
-    <button class="management-button back-button">Atrás</button>
+    <button class="management-button back-button" onclick="window.history.back()">Atrás</button>
     <button class="management-button cancel-res-button">Cancelar reserva</button>
     <button class="management-button new-res-button">Realizar nueva reserva</button>
-
-    <div w3-include-html="/html/confirmation-dialog.html">
-    </div>
 
     <script>
         w3IncludeHTML()

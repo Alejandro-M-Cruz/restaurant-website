@@ -39,13 +39,12 @@ let reservationsJson = `
 `
 
 const MAX_RESERVATIONS = 5
+const NEW_RESERVATION_HTML = "new-reservation.html"
+
 const reservations = JSON.parse(reservationsJson)
 const table = document.querySelector(".reservations-table")
 const cancelButton = document.querySelector(".cancel-res-button")
 const newResButton = document.querySelector(".new-res-button")
-const confirmationDialog = document.querySelector(".confirmation-dialog")
-const reservationToDelete = document.querySelector("#reservation-to-delete")
-const dialogButtons = document.querySelectorAll(".dialog-button")
 
 function tableTitleHTML() {
     return `
@@ -118,4 +117,5 @@ function cancelOnClick(selectedRow, reservations) {
 newResButton.onclick = () => {
     const selectedRow = document.querySelector(".selected-row")
     if (reservations.length >= MAX_RESERVATIONS) return alert("Ha alcanzado el máximo de reservas")
+    window.location.href = NEW_RESERVATION_HTML
 }
