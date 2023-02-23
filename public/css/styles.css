@@ -141,7 +141,7 @@ nav a:not(.user-icon):hover {
     background-color: var(--empty-row-color);
 }
 
-.logged-out-message {
+.info {
     text-align: center;
     width: 40%;
     margin: 4rem auto 4rem auto;
@@ -166,13 +166,13 @@ nav a:not(.user-icon):hover {
     margin: 2% 3% 0 17%;
 }
 
-.cancel-res-button {
+.delete-button {
     color: white;
     background-color: var(--cancel-button-color);
     margin-top: 2%;
 }
 
-.new-res-button {
+.create-button {
     color: black;
     background-color: var(--confirm-button-color);
     margin: 2% 17% 0 3%;
@@ -188,6 +188,12 @@ nav a:not(.user-icon):hover {
     color: black;
     background-color: var(--back-button-color);
     margin-top: 2%;
+}
+
+.logout-button {
+    color: black;
+    background-color: var(--back-button-color);
+    margin: 2% 17% 0 3%;
 }
 
 .signup-button {

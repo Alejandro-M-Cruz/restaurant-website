@@ -3,8 +3,8 @@ const express = require("express")
 const app = express()
 const apiRoute = "/api/v1"
 
-let loggedIn = null
-function login(userId) { loggedIn = userId }
+let currentUser = null    // not logged in
+function login(user) { currentUser = user }
 
 app.use(express.static("public"))
 app.use(express.urlencoded({extended: false}))
@@ -29,7 +29,7 @@ app.post(`${apiRoute}/new-reservation`, (req, res) => {
 app.post(`${apiRoute}/user-login`, (req, res) => {
     for (const user of users) {
         if (user.phoneNumber === req.body.phoneNumber && user.password === req.body.password) {
-            login(user.id)
+            login(user)
             return res.redirect("/")
         }
     }
@@ -37,7 +37,7 @@ app.post(`${apiRoute}/user-login`, (req, res) => {
 })
 
 app.get(`${apiRoute}/user`, (req, res) => {
-    res.json({ loggedIn })
+    res.json(currentUser)
 })
 
 app.post(`${apiRoute}/user-signup`, (req, res) => {
@@ -55,7 +55,7 @@ app.post(`${apiRoute}/user-signup`, (req, res) => {
         }
     }
     addUser(newUser)
-    login(newUser.id)
+    login(newUser)
     res.redirect("/")
 })
 

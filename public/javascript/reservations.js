@@ -21,17 +21,17 @@ const loggedOutPageContent = {
 const API = "/api/v1"
 document.querySelector(".page-title").innerHTML = reservationsPageContent.title
 const content = document.querySelector(".content-section")
-fetch(`${API}/user`).then(response => response.json()).then(data => {
-    if (data.loggedIn != null) {
+fetch(`${API}/user`).then(response => response.json()).then(user => {
+    if (user != null) {
         content.setAttribute("w3-include-html", "/html/templates/logged-in-reservations-template.html")
-        return w3IncludeHTML(() => loadReservations(data.loggedIn))
+        return w3IncludeHTML(() => loadReservations(user.id))
     }
     content.setAttribute("w3-include-html", "/html/templates/logged-out-reservations-template.html")
     w3IncludeHTML(loadLoggedOut)
 })
 
 function loadLoggedOut() {
-    document.querySelector(".logged-out-message").innerHTML = loggedOutPageContent.message
+    document.querySelector(".info").innerHTML = loggedOutPageContent.message
     document.querySelector(".back-button-alt").innerHTML = loggedOutPageContent.backButtonLabel
     document.querySelector(".login-button").innerHTML = loggedOutPageContent.loginButtonLabel
     document.querySelector(".signup-button").innerHTML = loggedOutPageContent.signupButtonLabel
@@ -100,19 +100,17 @@ function fillTable(table) {
 function loadPage() {
     const table = document.querySelector(".reservations-table")
     const backButton = document.querySelector(".back-button")
-    const cancelButton = document.querySelector(".cancel-res-button")
-    const newResButton = document.querySelector(".new-res-button")
+    const cancelButton = document.querySelector(".delete-button")
+    const newResButton = document.querySelector(".create-button")
 
     fillTable(table)
 
     backButton.innerHTML = reservationsPageContent.backButtonLabel
-
     cancelButton.innerHTML = reservationsPageContent.cancelResButtonLabel
     cancelButton.onclick = () => {
         const selectedRow = document.querySelector(".selected-row")
         cancelOnClick(selectedRow, table)
     }
-
     newResButton.innerHTML = reservationsPageContent.newResButtonLabel
     newResButton.onclick = () => {
         if (reservations.length >= MAX_RESERVATIONS) return alert(reservationsPageContent.maxResAlertMessage)
