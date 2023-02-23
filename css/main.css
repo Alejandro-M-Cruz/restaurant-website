@@ -10,34 +10,17 @@
 
 /* Modificaciones a los estilos de los SELECTORES por defecto (header, nav, a, img, etc) */
 
-header {
-    display: block;
-    position: relative;
-    background-color: orange;
-    overflow: visible;
-    z-index: 4;
-    width: 100%;
+#wrapper {
+    margin: 0 auto;
+    /* width: 1920px; */
 }
 
-nav {
-    float: right;
-}
-
-nav a {
-    display: block;
-    color: black;
-    margin: 0 1.5vw;
-    padding: 1.25rem;
-    line-height: 2.2rem;
-    font-size: 1.1rem;
+nav a:not(.user-icon):hover {
+    background-color: darkorange;
 }
 
 a {
     text-decoration: none;
-}
-
-footer {
-    background-color: grey;
 }
 
 /* Modificaciones a los elementos tipo CLASE (.class) */
@@ -59,29 +42,29 @@ ul li[class^='lista-paginas'], li[class*=' lista-paginas']{
 }
 
 .slide-image {
-    background-color: red;
-    position: relative;
     width: 60vw;
-    height: 40vw;
-    margin: auto;
-    text-align: right;
+    height: 32vw;
+    margin: 0 auto;
+    /* border: 1px solid purple; */
 }
 
 .slide-image-thing {
     position: relative;
-    background-color: orange;
+    /* border: 3px solid red; */
     width: 50vw;
-    height: 35vw;
-    margin: 0 auto;
-    padding: 70px 0;
+    height: 30vw;
+    margin: 2vw auto;
     text-align: center;
 }
 
 .slide-image-thing img {
     position: relative;
     display: block;
+    /* border: 3px solid red; */
     width: 100%;
     height: 100%;
+    border-radius: 8px;
+    filter: brightness(50%)
 }
 
 .slide-image-thing__center-text {
@@ -89,7 +72,60 @@ ul li[class^='lista-paginas'], li[class*=' lista-paginas']{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: blue;
+    color: white;
+    font-size: 30px;
+}
+
+.slide-image-thing__center-text-p {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 15px;
+}
+
+.reserva {
+    border: 3px solid black;
+    background-color: orange;
+    width: 500px;
+    height: 100px;
+    margin: 3em auto;
+}
+
+.reserva h2 {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 1.5em;
+}
+
+.about-us {
+    height: 30vw;
+}
+
+.about-us h2 {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+.about-us-description {
+    width: 40%;
+    float: left;
+    padding-left: 4em;
+}
+
+.about-us-image {
+    width: 40%;
+    float: right;
+    padding-right: 4em;
+}
+
+.about-us-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
 }
 
 /* Modificaciones a los elementos tipo ID (#id) */
@@ -102,7 +138,8 @@ ul li[class^='lista-paginas'], li[class*=' lista-paginas']{
 }
 
 #la-nostra-cosa-nav-button a {
-    color: white;
+    color: black;
+    float: left;
 }
 
 #la-nostra-cosa-nav-button:hover {
@@ -110,8 +147,6 @@ ul li[class^='lista-paginas'], li[class*=' lista-paginas']{
 }
 
 #user-icon {
-    position: absolute;
-    top: 25%;
     height: 2.2rem;
     width: 2.2rem;
 }
@@ -121,15 +156,18 @@ ul li[class^='lista-paginas'], li[class*=' lista-paginas']{
     width: 2vw;
     height: 2vw;
     display: block;
+    /* border: 3px solid blue; */
+    padding: 14vw 0;
 }
 
 #slide-image__left-arrow {
-    top: 18.50vw;
+    float: left;
+    padding-left: 1vw;
 }
 
 #slide-image__right-arrow {
     float: right;
-    bottom: 18.50vw;
+    padding-right: 1vw;
 }
 
 /* Modificaciones a los elementos tipo PSEUDO-CLASE (comportamiento de los selectores, :hover, :active, :default, :etc) */
@@ -138,3 +176,144 @@ nav a:not(.user-icon):hover {
     background-color: darkorange;
 }
 
+/* FOOTER STYLES */
+
+#footer-container {
+    background-color: lightgrey;
+    width: 100%;
+    height: 300px;
+}
+
+.vertical-list, .horizontal-list {
+    list-style-type: none;
+}
+
+.vertical-list li, .horizontal-list li {
+    padding: 0.5rem;
+}
+
+.vertical-list {
+    text-align: center;
+}
+
+.horizontal-list {
+    width: 100%;
+    padding-bottom: 0.8rem;
+}
+
+.horizontal-list li {
+    display: inline-block;
+}
+
+.social-media-icon {
+    transform: translateY(25%);
+}
+
+.social-media-icon img {
+    width: 3rem;
+}
+
+/* NAV BAR CONTAINER */
+
+#nav-bar-container {
+    display: block;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: orange;
+}
+
+a {
+    text-decoration: none;
+}
+
+#la-nostra-casa-nav-button {
+    display: inline-blocK;
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+    padding: 1.25rem;
+}
+
+#la-nostra-casa-nav-button:hover {
+    font-size: 2.5rem;
+}
+
+.lista-paginas {
+    list-style-type: none;
+}
+
+li[class^='lista-paginas'], li[class*=' lista-paginas'] {
+    display: inline-block;
+}
+
+#la-nostra-casa-nav-button a {
+    color: white;
+}
+
+nav {
+    float: right;
+}
+
+nav a {
+    display: block;
+    color: black;
+    margin: 0 1.5vw;
+    padding: 1.25rem;
+    line-height: 2.2rem;
+    font-size: 1.1rem;
+}
+
+nav a:not(.user-icon):hover {
+    background-color: darkorange;
+}
+
+.user-icon {
+    margin-right: 5vw;
+}
+
+.user-icon:hover img {
+    transform: scale(1.2, 1.2);
+}
+
+#user-icon {
+    position: absolute;
+    height: 2.2rem;
+    width: 2.2rem;
+}
+
+.main-content h2 {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.main-content__left-side {
+    float: left;
+    width: 50%;
+    background-color: lightgrey;
+}
+
+.main-content__left-side h3, .main-content__right-side h3 {
+    font-size: 1.5em;
+    line-height: 3em;
+}
+
+.main-content__left-side p {
+    line-height: 2em;
+}
+
+.main-content__right-side p {
+    line-height: 2em;
+}
+
+.main-content__right-side {
+    float: right;
+    width: 50%;
+    background-color: lightgrey;
+}
+
+.main-content:after {
+    content: "";
+    display: table;
+    clear: both;
+}

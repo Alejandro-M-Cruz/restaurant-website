@@ -8,38 +8,89 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    <header>
-        <h1 id="la-nostra-cosa-nav-button"> <a href="index.html">La Nostra Casa</a></h1>
-        <nav>
-            <ul class = "lista-paginas">
-                <li class="lista-paginas__inicio"><a href="index.html">Inicio</a></li>
-                <li class="lista-paginas__menu"><a href="#">Menú</a></li>
-                <li class="lista-paginas__reservas"><a href="reservations.html">Reservas</a></li>
-                <li class="lista-paginas__about-us"><a href="#">Sobre nosotros</a></li>
-                <li class="lista-paginas__contacto"><a href="#">Contacto</a></li>
-                <li class="lista-paginas__user-icon"><a href="#" class="user-icon"><img src="../images/user-icon.png" alt="User" id="user-icon"></a></li>
+    <div id="wrapper">
+        <div id="nav-bar-container">
+            <h1 id="la-nostra-casa-nav-button"><a href="#">La Nostra Casa</a></h1>
+            <nav>
+                <ul class = "lista-paginas">
+                    <li class="lista-paginas__inicio"><a href="#">Inicio</a></li>
+                    <li class="lista-paginas__menu"><a href="#">Menú</a></li>
+                    <li class="lista-paginas__reservas"><a href="../html/reservations.html">Reservas</a></li>
+                    <li class="lista-paginas__about-us"><a href="#">Sobre nosotros</a></li>
+                    <li class="lista-paginas__contacto"><a href="#">Contacto</a></li>
+                    <li class="lista-paginas__user-icon">
+                        <a href="/restaurant-website/html/login.html" class="user-icon"><img src="/images/user-icon.png" alt="User" id="user-icon"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="slide-image">
+            <img src="../images/left-arrow.png" alt="left arrow" id="slide-image__left-arrow">
+            <img src="../images/right_arrow.png" alt="right arrow" id="slide-image__right-arrow">
+            <div class="slide-image-thing">
+                <img src="../images/restaurante-1.jpg" alt = "restaurante image 1">
+                <h3 class = "slide-image-thing__center-text"> Restaurante de auténtica comida italiana </h3>
+                <p class = "slide-image-thing__center-text-p"> En calle Triana / 30, Las Palmas de Gran Canaria </p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <h2> MENÚ </h2>
+            <div class="main-content__left-side">
+               <h3> Pizzas </h3> 
+               <p> Margarita </p>
+               <p> 8.00€ </p>
+               <p> Margarita </p>
+               <p> 8.00€ </p>
+               <p> Margarita </p>
+               <p> 8.00€ </p>
+               <p> Margarita </p>
+               <p> 8.00€ </p>
+            </div>
+            <div class="main-content__right-side">
+                <h3> Pasta </h3> 
+                <p> Margarita </p>
+                <p> 8.00€ </p>
+                <p> Margarita </p>
+                <p> 8.00€ </p>
+                <p> Margarita </p>
+                <p> 8.00€ </p>
+                <p> Margarita </p>
+                <p> 8.00€ </p>
+            </div>
+        </div>
+
+        <div class="reserva">
+            <h2> <a href="#"> HAGA SU RESERVA AQUÍ </a></h2>
+        </div>
+
+        <div class="about-us">
+            <h2> SOBRE NOSOTROS</h2>
+            <div class="about-us-description">
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ad commodi perferendis, labore similique ducimus neque necessitatibus, cum tempora molestiae deserunt dolore velit quis at enim corrupti quasi ut iure?</p>
+            </div>
+            <div class="about-us-image">
+                <img src="../images/restaurante-1.jpg" alt="restaurante">
+            </div>
+        </div>
+
+        <footer id="footer-container">
+            <ul class="vertical-list">
+                <li>Abierto de lunes a domingo de 13:00 - 16:00 y 20:00 - 23:30</li>
+                <li>Teléfono de contacto: +34123456789</li>
+                <li>Correo electrónico: contacto@lanostracasa.com</li>
+                <li>Calle Triana / 30, Las Palmas de Gran Canaria</li>
+                <li>Abierto de lunes a domingo de 13:00 - 16:00 y 20:00 - 23:30</li>
             </ul>
-        </nav>
-    </header>
-    <div class="slide-image">
-        <img src="../images/left-arrow.png" alt="left arrow" id="slide-image__left-arrow">
-        <div class="slide-image-thing">
-            <img src="../images/restaurante-1.jpg" alt = "restaurante image 1">
-            <h3 class = "slide-image-thing__center-text"> Restaurante de comida italiana </h3>
-        </div>
-        <img src="../images/right_arrow.png" alt="right arrow" id="slide-image__right-arrow">
+            <ul class="horizontal-list">
+                <li>Síguenos en:</li>
+                <li class="social-media-icon"><img src="/images/user-icon.png" alt="User icon"></li>
+                <li class="social-media-icon"><img src="/images/user-icon.png" alt="User icon"></li>
+                <li class="social-media-icon"><img src="/images/user-icon.png" alt="User icon"></li>
+                <li>La Nostra Casa&#8482; todos los derechos reservados</li>
+            </ul>
+        </footer>
     </div>
-    <footer>
-        <ul class = "lista-informacion-restaurante">
-            <li class="lista-informacion-restaurante__horario"> Abierto de Lunes a Domingos <b> 13:00 - 16:00 y 20:00 - 23:30</b> </li>
-            <li class="lista-informacion-restaurante__telefono"> Teléfono de contacto: 928 17 57 82</li>
-            <li class="lista-informacion-restaurante__correo"> Correo electrónico: contacto@lanostracasa.com</li>
-            <li class="lista-informacion-restaurante__direccion"> Dirección: <b> Calle Triana Nº 30, Las Palmas de Gran Canaria </b></li>
-        </ul>
-        <div class = "follow-us-and-copyright-information"> 
-            <p id = "follow-us"> Siguenos en: </p>
-            <p id = "copyright"> La Casa Nostra @ todos los derechos reservados</p>
-        </div>
-    </footer>
 </body>
 </html>
