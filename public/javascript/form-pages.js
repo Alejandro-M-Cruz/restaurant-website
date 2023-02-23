@@ -1,5 +1,6 @@
 const path = window.location.pathname
 const filename = path.substring(path.lastIndexOf('/') + 1)
+const API = "/api/v1"
 
 w3IncludeHTML(() => {
     switch (filename) {
@@ -17,11 +18,13 @@ w3IncludeHTML(() => {
 const logInPageContent =
     {
         "title": "Inicie sesión para poder ver sus reservas",
+        "formAction": `${API}/user-login`,
+        "formMethod": "post",
         "formFields": [
             {
                 "id": "phone-number",
                 "label": "Número de teléfono: ",
-                "type": "text",
+                "type": "tel",
                 "name": "phoneNumber"
             },
             {
@@ -41,11 +44,13 @@ const logInPageContent =
 const signUpPageContent =
     {
         "title": "Regístrese para poder realizar su primera reserva",
+        "formAction": `${API}/user-signup`,
+        "formMethod": "post",
         "formFields": [
             {
                 "id": "phone-number",
                 "label": "Número de teléfono: ",
-                "type": "text",
+                "type": "tel",
                 "name": "phoneNumber"
             },
             {
@@ -71,6 +76,8 @@ const signUpPageContent =
 const newReservationPageContent =
     {
         "title": "Complete los datos para confirmar su reserva",
+        "formAction": `${API}/new-reservation`,
+        "formMethod": "post",
         "formFields": [
             {
                 "id": "full-name",
@@ -94,7 +101,7 @@ const newReservationPageContent =
                 "id": "number-of-people",
                 "label": "Número de personas: ",
                 "type": "number",
-                "name": "number"
+                "name": "numberOfPeople"
             }
         ],
         "cancelButtonLabel": "Atrás",
@@ -103,6 +110,7 @@ const newReservationPageContent =
 
 function loadPage(pageContent) {
     const title = document.querySelector(".page-title")
+    const form = document.querySelector(".user-form")
     const formLabels = document.querySelector(".labels-container")
     const formInputs = document.querySelector(".inputs-container")
     const cancelButton = document.querySelector(".cancel-button")
@@ -110,6 +118,8 @@ function loadPage(pageContent) {
     const alreadyDiv = document.querySelector(".already-div")
 
     title.innerHTML = pageContent.title
+    form.action = pageContent.formAction
+    form.method = pageContent.formMethod
     formLabels.innerHTML = ""
     formInputs.innerHTML = ""
     pageContent.formFields.forEach(field => {

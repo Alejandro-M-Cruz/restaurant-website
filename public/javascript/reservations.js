@@ -1,49 +1,50 @@
-w3IncludeHTML(loadPage)
+const reservationsPageContent = {
+    "title": "Reservas",
+    "tableHeaders": [ "Fecha", "Hora", "Número de personas", "A nombre de" ],
+    "availableResLabel": "Puede realizar $ reserva/s más",
+    "backButtonLabel": "Atrás",
+    "cancelResButtonLabel": "Cancelar reserva",
+    "newResButtonLabel": "Realizar nueva reserva",
+    "selectResAlertMessage": "Seleccione una reserva para poder cancelarla",
+    "confirmCancelMessage": "¿Seguro que desea eliminar la reserva seleccionada?",
+    "maxResAlertMessage": "Ha alcanzado el máximo de reservas"
+}
 
-let reservationsPageContent =
-    {
-        "title": "Reservas",
-        "tableHeaders": [ "Fecha", "Hora", "Número de personas", "A nombre de" ],
-        "availableResLabel": "Puede realizar $ reserva/s más",
-        "backButtonLabel": "Atrás",
-        "cancelResButtonLabel": "Cancelar reserva",
-        "newResButtonLabel": "Realizar nueva reserva",
-        "selectResAlertMessage": "Seleccione una reserva para poder cancelarla",
-        "confirmCancelMessage": "¿Seguro que desea eliminar la reserva seleccionada?",
-        "maxResAlertMessage": "Ha alcanzado el máximo de reservas"
+const loggedOutPageContent = {
+    "title": "Reservas",
+    "message": "Inicie sesión o regístrese para poder acceder a sus reservas",
+    "backButtonLabel": "Atrás",
+    "loginButtonLabel": "Iniciar sesión",
+    "signupButtonLabel": "Registrarse"
+}
+
+const API = "/api/v1"
+document.querySelector(".page-title").innerHTML = reservationsPageContent.title
+const content = document.querySelector(".content-section")
+fetch(`${API}/user`).then(response => response.json()).then(data => {
+    if (data.loggedIn != null) {
+        content.setAttribute("w3-include-html", "/html/templates/logged-in-reservations-template.html")
+        return w3IncludeHTML(() => loadReservations(data.loggedIn))
     }
+    content.setAttribute("w3-include-html", "/html/templates/logged-out-reservations-template.html")
+    w3IncludeHTML(loadLoggedOut)
+})
 
-let reservations =
-    [
-      {
-        "id": 1,
-        "date": "08/02/2023",
-        "hour": "14:30",
-        "numberOfPeople": "7",
-        "name": "Alberto Santana"
-      },
-      {
-        "id": 2,
-        "date": "10/02/2023",
-        "hour": "14:30",
-        "numberOfPeople": "2",
-        "name": "Alberto Santana"
-      },
-      {
-        "id": 3,
-        "date": "07/02/2023",
-        "hour": "14:30",
-        "numberOfPeople": "5",
-        "name": "Carlos Santana"
-      },
-      {
-        "id": 4,
-        "date": "15/02/2023",
-        "hour": "14:30",
-        "numberOfPeople": "1",
-        "name": "Alberto Santana"
-      }
-    ]
+function loadLoggedOut() {
+    document.querySelector(".logged-out-message").innerHTML = loggedOutPageContent.message
+    document.querySelector(".back-button-alt").innerHTML = loggedOutPageContent.backButtonLabel
+    document.querySelector(".login-button").innerHTML = loggedOutPageContent.loginButtonLabel
+    document.querySelector(".signup-button").innerHTML = loggedOutPageContent.signupButtonLabel
+}
+
+let reservations
+
+function loadReservations(userId) {
+    fetch(`${API}/reservations/${userId}`).then(response => response.json()).then(data => {
+        reservations = data
+        loadPage()
+    })
+}
 
 const MAX_RESERVATIONS = 5
 const NEW_RESERVATION_HTML = "new-reservation.html"
@@ -72,7 +73,7 @@ function reservationHTML(reservation) {
     return `
         <tr id="reservation${reservation.id}">
             <td>${reservation.date}</td>
-            <td>${reservation.hour}</td>
+            <td>${reservation.time}</td>
             <td>${reservation.numberOfPeople}</td>
             <td>${reservation.name}</td>
         </tr>

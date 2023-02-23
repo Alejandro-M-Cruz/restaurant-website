@@ -1,0 +1,27 @@
+{
+  "name": "restaurant-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon backend/api.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alejandro-M-Cruz/restaurant-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alejandro-M-Cruz/restaurant-website/issues"
+  },
+  "homepage": "https://github.com/Alejandro-M-Cruz/restaurant-website#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node": "^19.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

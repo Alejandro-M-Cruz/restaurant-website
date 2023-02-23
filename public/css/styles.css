@@ -1,0 +1,292 @@
+:root {
+    --main-color: orange;
+    --emphasis-color: darkorange;
+    --cancel-button-color: #fa372b;
+    --confirm-button-color: limegreen;
+    --back-button-color: #ffd232;
+    --hover-row-color: #eeeeee;
+    --selected-row-color: rgba(255, 165, 0, 0.7);
+    --empty-row-color: #dddddd;
+    --input-focus-color: #eeeeee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.page-title {
+    width: 50%;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 7rem auto 0 auto;
+}
+
+/* -------------NAVBAR------------- */
+
+#nav-bar-container {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-color);
+}
+
+#la-nostra-casa-nav-button {
+    display: inline-blocK;
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+    padding: 1.25rem;
+}
+
+#la-nostra-casa-nav-button:hover {
+    font-size: 2.5rem;
+}
+
+.lista-paginas {
+    list-style-type: none;
+}
+
+li[class^='lista-paginas'], li[class*=' lista-paginas'] {
+    display: inline-block;
+}
+
+#la-nostra-casa-nav-button a {
+    color: white;
+}
+
+nav {
+    float: right;
+}
+
+nav a {
+    display: block;
+    color: black;
+    margin: 0 1.5vw;
+    padding: 1.25rem;
+    line-height: 2.2rem;
+    font-size: 1.1rem;
+}
+
+nav a:not(.user-icon):hover {
+    background-color: var(--emphasis-color);
+}
+
+.user-icon {
+    margin-right: 5vw;
+}
+
+.user-icon:hover img {
+    transform: scale(1.2, 1.2);
+}
+
+.user-icon img {
+    position: absolute;
+    top: 25%;
+    height: 2.2rem;
+    width: 2.2rem;
+}
+
+
+/* -------------TABLE------------- */
+
+.reservations-table {
+    width: 70vw;
+    margin: 4vw auto 3vw auto;
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+.reservations-table th, .reservations-table td {
+    padding: 0.8vw;
+    border: 1px solid lightgrey;
+}
+
+.reservations-table th {
+    font-size: 1.3vw;
+    background-color: var(--main-color);
+    color: white;
+}
+
+.reservations-table td {
+    text-align: center;
+    font-size: 1vw;
+}
+
+.reservations-table tr:not(.title-row):not(.empty-row):hover {
+    cursor: pointer;
+}
+
+.reservations-table tr:not(.selected-row):not(.title-row):not(.empty-row):hover {
+    background-color: var(--hover-row-color);
+}
+
+.selected-row {
+    background-color: var(--selected-row-color);
+}
+
+.empty-row {
+    background-color: var(--empty-row-color);
+}
+
+.logged-out-message {
+    text-align: center;
+    width: 40%;
+    margin: 4rem auto 4rem auto;
+    font-size: 2.5rem;
+}
+
+/* -------------BUTTONS------------- */
+
+.management-button {
+    display: block;
+    font-size: 1vw;
+    width: 20%;
+    padding: 1vw;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+}
+
+.back-button {
+    color: black;
+    background-color: var(--back-button-color);
+    margin: 2% 3% 0 17%;
+}
+
+.cancel-res-button {
+    color: white;
+    background-color: var(--cancel-button-color);
+    margin-top: 2%;
+}
+
+.new-res-button {
+    color: black;
+    background-color: var(--confirm-button-color);
+    margin: 2% 17% 0 3%;
+}
+
+.back-button-alt {
+    color: white;
+    background-color: var(--cancel-button-color);
+    margin: 2% 3% 0 17%;
+}
+
+.login-button {
+    color: black;
+    background-color: var(--back-button-color);
+    margin-top: 2%;
+}
+
+.signup-button {
+    color: black;
+    background-color: var(--confirm-button-color);
+    margin: 2% 17% 0 3%;
+}
+
+/* -------------FORM PAGE------------- */
+
+/* -------------FORM------------- */
+
+.user-form {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.user-form .labels-container, .user-form .inputs-container {
+    display: inline-block;
+    text-align: left;
+}
+
+.labels-container {
+    margin-right: 2rem;
+}
+
+.inputs-container {
+    margin-left: 2rem;
+}
+
+.user-form label, .user-form input {
+    display: block;
+    margin: 5rem 0;
+}
+
+.user-form input {
+    display: block;
+    font-size: 1.4rem;
+    height: 2rem;
+    border: black solid 1px;
+    width: 25rem;
+    padding-left: 3px;
+}
+
+.user-form input:focus {
+    background-color: var(--input-focus-color);
+}
+
+
+/* -------------BUTTONS------------- */
+
+.buttons-container {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.cancel-button, .submit-button {
+    display: inline-block;
+    font-size: 1.2rem;
+    width: 20%;
+    padding: 1rem;
+    margin: 0 3rem 2rem 3rem;
+    text-align: center;
+}
+
+.cancel-button:hover, .submit-button:hover {
+    cursor: pointer;
+}
+
+.cancel-button {
+    background-color: var(--cancel-button-color);
+    color: white;
+}
+
+.submit-button {
+    background-color: var(--confirm-button-color);
+}
+
+
+/* -------------LINK TO LOGIN / SIGNUP------------- */
+
+.already-paragraph {
+    display: inline;
+}
+
+.already-div {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.go-to-login-signup {
+    color: var(--emphasis-color);
+    background: none;
+    font-size: inherit;
+}
+
+.go-to-login-signup:hover {
+    cursor: pointer;
+}
+
