@@ -42,39 +42,37 @@ button:hover {
 /* -------------NAVBAR------------- */
 
 #nav-bar-container {
-    display: block;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: var(--main-color);
-}
-
-#la-nostra-casa-nav-button {
-    display: inline-blocK;
-    font-size: 2.2rem;
-    line-height: 2.2rem;
-    padding: 1.25rem;
-}
-
-#la-nostra-casa-nav-button:hover {
-    font-size: 2.5rem;
+    z-index: 999;
 }
 
 .lista-paginas {
     list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lista-paginas__titulo {
+    flex-grow: 10;
+}
+
+#la-nostra-casa-nav-title {
+    font-size: 2.2rem;
+    color: white;
+}
+
+#la-nostra-casa-nav-title:hover {
+    font-size: 2.3rem;
 }
 
 li[class^='lista-paginas'], li[class*=' lista-paginas'] {
     display: inline-block;
-}
-
-#la-nostra-casa-nav-button a {
-    color: white;
-}
-
-nav {
-    float: right;
 }
 
 nav a {
@@ -86,7 +84,7 @@ nav a {
     font-size: 1.1rem;
 }
 
-nav a:not(.user-icon):hover {
+nav a:not(.user-icon):not(#la-nostra-casa-nav-title):hover {
     background-color: var(--emphasis-color);
 }
 
@@ -111,27 +109,18 @@ nav a:not(.user-icon):hover {
 .slide-image {
     width: 60vw;
     height: 32vw;
-    margin: 0 auto;
-    /* border: 1px solid purple; */
+    margin: 10vw auto 0;
+    z-index: 1;
 }
 
 .slide-image-thing {
     position: relative;
-    /* border: 3px solid red; */
     width: 50vw;
     height: 30vw;
     margin: 2vw auto;
     text-align: center;
-}
-
-.slide-image-thing img {
-    position: relative;
-    display: block;
-    /* border: 3px solid red; */
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    filter: brightness(50%)
+    background-size: cover;
+    /* filter: brightness(50%) */
 }
 
 .slide-image-thing__center-text {
@@ -140,7 +129,8 @@ nav a:not(.user-icon):hover {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 30px;
+    font-size: 1.5em;
+    filter: brightness(100%)
 }
 
 .slide-image-thing__center-text-p {
@@ -150,29 +140,51 @@ nav a:not(.user-icon):hover {
     transform: translate(-50%, -50%);
     color: white;
     font-size: 15px;
+    filter: brightness(100%)
 }
 
 #slide-image__left-arrow, #slide-image__right-arrow {
     position: relative;
+    box-sizing: content-box;
     width: 2vw;
     height: 2vw;
     display: block;
-    /* border: 3px solid blue; */
-    padding: 14vw 0;
+    padding-top: 14vw;
+}
+
+#slide-image__left-arrow, #slide-image__right-arrow img{
+    image-resolution: 25px;
 }
 
 #slide-image__left-arrow {
     float: left;
     padding-left: 1vw;
+    background-color: white;
 }
 
 #slide-image__right-arrow {
     float: right;
     padding-right: 1vw;
+    background-color: white;
+}
+
+#slide-image__left-arrow img {
+    width: 40px;
+    height: 40px;
+}
+
+#slide-image__right-arrow img {
+    width: 40px;
+    height: 40px;
 }
 
 
+
 /* -------------MENU------------- */
+
+.main-content__left-side, .main-content__right-side {
+    border: 1px solid black;
+}
 
 .main-content h2 {
     text-align: center;
@@ -188,10 +200,11 @@ nav a:not(.user-icon):hover {
 .main-content__left-side h3, .main-content__right-side h3 {
     font-size: 1.5em;
     line-height: 3em;
+    padding-left: 1.3em;
 }
 
 .main-content__left-side p {
-    line-height: 2em;
+    line-height: 2.5em;
 }
 
 .main-content__right-side p {
@@ -204,6 +217,40 @@ nav a:not(.user-icon):hover {
     background-color: lightgrey;
 }
 
+.sides {
+    margin-top: 1rem;
+}
+
+.sides:last-child {
+    margin-bottom: 1rem;
+}
+
+.left-side {
+    float: left;
+    padding-left: 2em;
+}
+
+.left-side p, .right-side p{
+    line-height: 1.3em;
+}
+
+.left-side__ingredients {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.right-side {
+    float: right;
+    text-align: right;
+    padding-right: 3em;
+}
+
+.sides:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .main-content:after {
     content: "";
     display: table;
@@ -214,19 +261,21 @@ nav a:not(.user-icon):hover {
 /* -------------LINK TO RESERVATIONS------------- */
 
 .reserva {
-    border: 3px solid black;
+    border: 1px solid black;
     background-color: orange;
-    width: 500px;
-    height: 100px;
-    margin: 3em auto;
+    width: 95%;
+    margin: 5rem auto;
+    text-align: center;
+    border-radius: 1rem;
 }
 
 .reserva h2 {
+    font-size: 1.5rem;
+    color: white;
     display: block;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 1.5em;
+    padding: 3rem;
 }
+
 
 /* -------------ABOUT US------------- */
 
@@ -471,4 +520,20 @@ nav a:not(.user-icon):hover {
 
 .social-media-icon img {
     width: 3rem;
+}
+
+.icons-size {
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+    margin-left: 1em;
+}
+
+.icons-size a {
+    display: inline-block;
+}
+
+.icons-size img {
+    width: 100%;
+    height: 100%;
 }
