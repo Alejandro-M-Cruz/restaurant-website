@@ -491,27 +491,46 @@ nav a:not(.user-icon):not(#la-nostra-casa-nav-title):hover {
     background-color: lightgrey;
     width: 100%;
     height: 300px;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:center;
 }
 
-.vertical-list, .horizontal-list {
-    list-style-type: none;
+#footer-container ul{
+    list-style-type:none;
 }
 
-.vertical-list li, .horizontal-list li {
-    padding: 0.5rem;
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    padding-bottom: 1em;
 }
 
-.vertical-list {
-    text-align: center;
+.contact-list .copyright{
+    font-size:0.8em;
 }
 
-.horizontal-list {
-    width: 100%;
-    padding-bottom: 0.8rem;
+.hours {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    height:100%;
+    align-items:center;
 }
 
-.horizontal-list li {
-    display: inline-block;
+.social-list {
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom:1em;
 }
 
 .social-media-icon {
@@ -520,6 +539,15 @@ nav a:not(.user-icon):not(#la-nostra-casa-nav-title):hover {
 
 .social-media-icon img {
     width: 3rem;
+}
+
+hr{
+    height:80%;
+    width:0.1%;
+    border-width:0;
+    color:black;
+    background-color:black;
+   
 }
 
 .icons-size {
