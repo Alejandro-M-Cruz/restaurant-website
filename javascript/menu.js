@@ -4,8 +4,8 @@ function loadContent(path, element) {
     })
 }
 
-const menuLeft = document.querySelector(".main-content__left-side")
-const menuRight = document.querySelector(".main-content__right-side")
+const menuLeft = document.querySelector(".menu-left")
+const menuRight = document.querySelector(".menu-right")
 
 loadContent("/demo-database/menu-left.json", menuLeft)
 loadContent("/demo-database/menu-right.json", menuRight)

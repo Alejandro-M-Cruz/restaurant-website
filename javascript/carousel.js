@@ -1,10 +1,10 @@
 window.onload = function () {
     const IMAGENES = [
-        '/images/restaurante-1.jpg',
-        '/images/restaurante-2.jpg',
-        '/images/restaurante-3.jpg',
-        '/images/restaurante-4.jpg',
-        '/images/restaurante-5.jpg'
+        '/images/carousel/restaurante-1.jpg',
+        '/images/carousel/restaurante-2.jpg',
+        '/images/carousel/restaurante-3.jpg',
+        '/images/carousel/restaurante-4.jpg',
+        '/images/carousel/restaurante-5.jpg'
     ];
 
     let posicionActual = 0;
@@ -33,7 +33,6 @@ window.onload = function () {
 
     function renderizeImage() {
         $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
-        $imagen.style.filter = "brightness(50%)";
     }
 
     $advanceButton.addEventListener('click', nextImage);

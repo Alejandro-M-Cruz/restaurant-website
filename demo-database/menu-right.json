@@ -28,5 +28,35 @@
                 "price": "8.00€"
             }
         ]
+    },
+    {
+        "title": "Postres",
+        "dishes": [
+            {
+                "name": "Margarita",
+                "ingredients": "Masa, tomate, queso y orégano",
+                "price": "8.00€"
+            },
+            {
+                "name": "Margarita",
+                "ingredients": "Masa, tomate, queso y orégano",
+                "price": "8.00€"
+            },
+            {
+                "name": "Margarita",
+                "ingredients": "Masa, tomate, queso y orégano",
+                "price": "8.00€"
+            },
+            {
+                "name": "Margarita",
+                "ingredients": "Masa, tomate, queso y orégano",
+                "price": "8.00€"
+            },
+            {
+                "name": "Margarita",
+                "ingredients": "Masa, tomate, queso y orégano",
+                "price": "8.00€"
+            }
+        ]
     }
 ]
