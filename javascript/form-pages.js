@@ -28,12 +28,14 @@ function loadPage(pageContent) {
     document.querySelector(".cancel-button").innerHTML = pageContent.cancelButtonLabel
     document.querySelector(".submit-button").innerHTML = pageContent.confirmButtonLabel
     let labelsHTML = ""
-    let inputsHTML = ""
+    let inputsFragment = new DocumentFragment()
     pageContent.formFields.forEach(field => {
         if (field.label) labelsHTML += `<label for="${field.id}">${field.label}</label>`
-        inputsHTML += `
-            <${field.tag ? field.tag : "input"} id="${field.id}" type="${field.type}" name="${field.name}" ${field.attributes}>
-        `
+        const input = document.createElement(field.tag ? field.tag : "input")
+        for (const attribute in field) {
+            if (attribute !== "tag" && attribute !== "label") input[attribute] = field[attribute]
+        }
+        inputsFragment.appendChild(input)
     })
     const formInputs = document.querySelector(".inputs-container")
     if (labelsHTML !== "") {
@@ -41,7 +43,7 @@ function loadPage(pageContent) {
     } else {
         formInputs.style.width = "100%"
     }
-    formInputs.innerHTML = inputsHTML
+    formInputs.appendChild(inputsFragment)
     if (filename !== "new-reservation.html" && filename !== "complaints.html") {
         document.querySelector(".already-div").innerHTML = `
             <p class="already-paragraph">${pageContent.already}</p>

@@ -6,7 +6,11 @@
             "id": "complaint",
             "type": "text",
             "name": "complaint",
-            "attributes": "required max-length='255' rows='5' cols='55'"
+            "required": true,
+            "maxLength": 500,
+            "rows": "10",
+            "cols": "55",
+            "placeholder": "Describa aquí su reclamación o sugerencia..."
         }
     ],
     "cancelButtonLabel": "Cancelar",
