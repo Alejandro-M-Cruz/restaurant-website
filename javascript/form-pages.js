@@ -9,8 +9,11 @@ w3IncludeHTML(() => {
         case "signup.html":
             loadContent("/demo-database/signup-page-content.json")
             break
-        default:
+        case "new-reservation.html":
             loadContent("/demo-database/new-reservation-page-content.json")
+            break
+        default:
+            loadContent("/demo-database/complaints-page-content.json")
     }
 })
 
@@ -22,18 +25,24 @@ function loadContent(path) {
 
 function loadPage(pageContent) {
     document.querySelector(".page-title").innerHTML = pageContent.title
-    const formLabels = document.querySelector(".labels-container")
-    const formInputs = document.querySelector(".inputs-container")
     document.querySelector(".cancel-button").innerHTML = pageContent.cancelButtonLabel
     document.querySelector(".submit-button").innerHTML = pageContent.confirmButtonLabel
-
-    formLabels.innerHTML = ""
-    formInputs.innerHTML = ""
+    let labelsHTML = ""
+    let inputsHTML = ""
     pageContent.formFields.forEach(field => {
-        formLabels.innerHTML += `<label for="${field.id}">${field.label}</label>`
-        formInputs.innerHTML += `<input id="${field.id}" type="${field.type}" name="${field.name}" ${field.constraints}>`
+        if (field.label) labelsHTML += `<label for="${field.id}">${field.label}</label>`
+        inputsHTML += `
+            <${field.tag ? field.tag : "input"} id="${field.id}" type="${field.type}" name="${field.name}" ${field.attributes}>
+        `
     })
-    if (filename !== "new-reservation.html") {
+    const formInputs = document.querySelector(".inputs-container")
+    if (labelsHTML !== "") {
+        document.querySelector(".labels-container").innerHTML = labelsHTML
+    } else {
+        formInputs.style.width = "100%"
+    }
+    formInputs.innerHTML = inputsHTML
+    if (filename !== "new-reservation.html" && filename !== "complaints.html") {
         document.querySelector(".already-div").innerHTML = `
             <p class="already-paragraph">${pageContent.already}</p>
             <a href="${pageContent.linkHref}" class="go-to-login-signup"><b>${pageContent.alreadyLink}</b></a>

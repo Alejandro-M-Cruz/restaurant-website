@@ -6,14 +6,14 @@
             "label": "Número de teléfono: ",
             "type": "tel",
             "name": "phoneNumber",
-            "constraints": "required max-length='15'"
+            "attributes": "required max-length='15'"
         },
         {
             "id": "password",
             "label": "Contraseña: ",
             "type": "password",
             "name": "password",
-            "constraints": "required max-length='16'"
+            "attributes": "required max-length='16'"
         }
     ],
     "cancelButtonLabel": "Atrás",

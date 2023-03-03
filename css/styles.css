@@ -132,7 +132,6 @@ nav a:not(.user-icon):not(#la-nostra-casa-nav-title):hover {
     margin: 2vw auto;
     text-align: center;
     background-size: cover;
-    border-radius: 0.5rem;
 }
 
 .slide-image-thing__center-text {
@@ -422,18 +421,26 @@ nav a:not(.user-icon):not(#la-nostra-casa-nav-title):hover {
     margin: 5rem 0;
 }
 
-.user-form input {
+.user-form input, .user-form textarea {
     display: block;
     font-size: 1.4rem;
-    height: 2rem;
     border: black solid 1px;
-    width: 25rem;
     padding-left: 3px;
 }
 
-.user-form input:focus {
+.user-form input {
+    height: 2rem;
+    width: 25rem;
+}
+
+.user-form textarea {
+    margin: 3rem auto;
+}
+
+.user-form input:focus, .user-form textarea:focus {
     background-color: var(--input-focus-color);
 }
+
 
 
 /* -------------BUTTONS------------- */

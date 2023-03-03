@@ -1,0 +1,14 @@
+{
+    "title": "Hoja de reclamaciones",
+    "formFields": [
+        {
+            "tag": "textarea",
+            "id": "complaint",
+            "type": "text",
+            "name": "complaint",
+            "attributes": "required max-length='255' rows='5' cols='55'"
+        }
+    ],
+    "cancelButtonLabel": "Cancelar",
+    "confirmButtonLabel": "Enviar"
+}
